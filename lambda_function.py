@@ -13,5 +13,5 @@ def lambda_handler(event, context):
     secret = get_ssm_secret(os.environ.get('API_SSM_PARAMETER'))
     url = os.environ.get('API_URL') + "/data/2.5/weather?q=london&appid=" + secret.get("Parameter").get("Value")
     response = requests.get(url)
-    print(response)
+    print(response.json())
     print("Weather in London is: ")
