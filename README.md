@@ -1,5 +1,8 @@
 # tonypythonweatherlambda
 
+## Updating a Lambda function with additional dependencies
+If your Lambda function depends on libraries other than the AWS SDK for Python (Boto3), install the libraries to a local directory with pip, and include them in your deployment package (.zip file).
+
 ## Deployment instructions based on [link](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html)
 1. Install libraries locally
 ```
